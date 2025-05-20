@@ -73,7 +73,7 @@
     <!-- link to assets/styles.css from local -->
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
-  <body class="bg-[#FCFCFC] dark:bg-black leading-relaxed">
+  <body class="bg-[#FCFCFC] dark:bg-black leading-relaxed" >
     <!-- Header -->
     <header
       class="header left-0 top-0 z-40 flex w-full items-center absolute bg-transparent"
@@ -90,7 +90,8 @@
                   data-nimg="1"
                   class="h-[38px] text-transparent"
                 />
-                <span class="text-3xl font-bold dark:text-white"> FastAI </span>
+                <!-- <span class="text-3xl font-bold dark:text-white"> FastAI.dev </span> -->
+                <span class="text-3xl font-bold dark:bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] bg-clip-text dark:text-transparent"> FastAI.dev </span>
               </div>
             </a>
           </div>
@@ -192,7 +193,7 @@
                     class="relative flex gap-[1rem] z-10 py-2 text-4xl font-extrabold md:py-8 leading-tight text-black dark:text-white sm:text-5xl md:text-6xl xl:text-8xl"
                   >
                     <span class="opacity-80 select-none">to</span>
-                    <span class="text-primary">FastAI</span>
+                    <span class="text-primary dark:bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] bg-clip-text dark:text-transparent">FastAI.dev</span>
                   </h1>
                   <p
                     class="text-black dark:text-white absolute-center font-extrabold z-0 text-5xl sm:text-6xl opacity-10 md:text-8xl xl:text-9xl uppercase"
@@ -230,19 +231,76 @@
                 </a>
               </div>
             </div>
+            <!-- SVG background decor -->
+            <svg
+              class="absolute top-0 right-0 z-0"
+              width="238"
+              height="531"
+              viewBox="0 0 238 531"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                opacity="0.3"
+                x="422.819"
+                y="-70.8145"
+                width="196"
+                height="541.607"
+                rx="2"
+                transform="rotate(51.2997 422.819 -70.8145)"
+                fill="url(#paint0_linear_83:2)"
+              />
+              <rect
+                opacity="0.3"
+                x="426.568"
+                y="144.886"
+                width="59.7544"
+                height="541.607"
+                rx="2"
+                transform="rotate(51.2997 426.568 144.886)"
+                fill="url(#paint1_linear_83:2)"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_83:2"
+                  x1="517.152"
+                  y1="-251.373"
+                  x2="517.152"
+                  y2="459.865"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#4A6CF7" />
+                  <stop offset="1" stop-color="#4A6CF7" stop-opacity="0" />
+                </linearGradient>
+                <linearGradient
+                  id="paint1_linear_83:2"
+                  x1="455.327"
+                  y1="-35.673"
+                  x2="455.327"
+                  y2="675.565"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#4A6CF7" />
+                  <stop offset="1" stop-color="#4A6CF7" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="container mx-auto px-6 py-20">
-      <h2 class="text-4xl font-extrabold text-center mb-16 text-gray-900">
-        Key Features
+    <section 
+      id="features" 
+      class="container mx-auto px-6 py-20"
+    >
+      <h2 class="text-4xl font-extrabold text-center mb-16 text-gray-900 dark:text-white">
+        Main Features
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
         <div
-          class="flex flex-col items-center text-center p-8 border border-gray-200 rounded-xl shadow hover:shadow-lg transition"
+          class="flex flex-col items-center text-center p-8 bg-gray-200 dark:bg-transparent border border-gray-200 rounded-xl shadow hover:shadow-lg transition cursor-pointer transform active:scale-105 hover:scale-105 duration-200 ease-in-out shadow-md hover:shadow-lg p-4 rounded-xl hover:bg-gray-300"
         >
           <svg
             class="w-16 h-16 mb-6 text-indigo-600"
@@ -256,13 +314,13 @@
             <path d="M12 20l9-5-9-5-9 5 9 5z" />
             <path d="M12 12l9-5-9-5-9 5 9 5z" />
           </svg>
-          <h3 class="text-2xl font-semibold mb-3">State-of-the-Art Models</h3>
-          <p class="text-gray-700">
+          <h3 class="text-2xl font-semibold mb-3 dark:text-white">State-of-the-Art Models</h3>
+          <p class="text-gray-700 font-semibold">
             Leverage the latest deep learning architectures and techniques.
           </p>
         </div>
         <div
-          class="flex flex-col items-center text-center p-8 border border-gray-200 rounded-xl shadow hover:shadow-lg transition"
+          class="flex flex-col items-center text-center p-8 bg-gray-200 dark:bg-transparent border border-gray-200 rounded-xl shadow hover:shadow-lg transition cursor-pointer transform active:scale-105 hover:scale-105 duration-200 ease-in-out shadow-md hover:shadow-lg p-4 rounded-xl hover:bg-gray-300"
         >
           <svg
             class="w-16 h-16 mb-6 text-indigo-600"
@@ -277,14 +335,14 @@
             <line x1="12" y1="8" x2="12" y2="12" />
             <line x1="12" y1="16" x2="12" y2="16" />
           </svg>
-          <h3 class="text-2xl font-semibold mb-3">Open Source & Community</h3>
-          <p class="text-gray-700">
+          <h3 class="text-2xl font-semibold mb-3 dark:text-white">Open Source & Community</h3>
+          <p class="text-gray-700 font-semibold">
             Join a vibrant community contributing to open source AI tools and
             courses.
           </p>
         </div>
         <div
-          class="flex flex-col items-center text-center p-8 border border-gray-200 rounded-xl shadow hover:shadow-lg transition"
+          class="flex flex-col items-center text-center p-8 bg-gray-200 dark:bg-transparent border border-gray-200 rounded-xl shadow hover:shadow-lg transition cursor-pointer transform active:scale-105 hover:scale-105 duration-200 ease-in-out shadow-md hover:shadow-lg p-4 rounded-xl hover:bg-gray-300"
         >
           <svg
             class="w-16 h-16 mb-6 text-indigo-600"
@@ -298,8 +356,8 @@
             <path d="M3 12h18" />
             <path d="M12 3v18" />
           </svg>
-          <h3 class="text-2xl font-semibold mb-3">Easy to Use</h3>
-          <p class="text-gray-700">
+          <h3 class="text-2xl font-semibold mb-3 dark:text-white">Easy to Use</h3>
+          <p class="text-gray-700 font-semibold">
             Designed for both beginners and experts to quickly build AI
             applications.
           </p>
@@ -308,9 +366,13 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="bg-indigo-50 py-20">
+    <section 
+      id="testimonials" 
+      class="bg-indigo-50 py-20 dark:bg-transparent"
+      style="background-image: url('https://your-existing-bg.jpg'), url('https://startup.nextjstemplates.com/images/video/shape.svg'); background-position: center, top right; background-repeat: no-repeat, no-repeat;"
+      >
       <div class="container mx-auto px-6 max-w-4xl text-center">
-        <h2 class="text-4xl font-extrabold mb-12 text-gray-900">
+        <h2 class="text-4xl font-extrabold mb-12 text-gray-900 dark:text-white">
           What Our Users Say
         </h2>
         <div class="space-y-12">
@@ -337,35 +399,59 @@
     </section>
 
     <!-- Call to Action Section -->
-    <section id="contact" class="container mx-auto px-6 py-20 text-center">
-      <h2 class="text-4xl font-extrabold mb-8 text-gray-900">Get in Touch</h2>
-      <p class="mb-6 text-lg text-gray-700 max-w-xl mx-auto">
-        For inquiries, please email us at
-        <a href="mailto:info@fastai.dev" class="text-indigo-600 hover:underline"
-          >info@fastai.dev</a
-        >
-        or visit our website:
+    <section id="contact" class="mx-auto px-6 py-20 text-start dark:bg-gray-dark flex justify-around">
+      <div>
+        <h2 class="text-4xl font-extrabold mb-8 text-gray-900 dark:text-white">Get in Touch</h2>
+        <p class="mb-6 text-lg text-gray-400 max-w-xl">
+          For inquiries, please email us at
+          <a href="mailto:info@fastai.dev" class="text-indigo-600 hover:underline"
+            >info@fastai.dev</a
+          >
+          or visit our website:
+          <a
+            href="https://fastai.dev/"
+            class="text-indigo-600 hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+            >https://fastai.dev/</a
+          >
+        </p>
         <a
           href="https://fastai.dev/"
-          class="text-indigo-600 hover:underline"
           target="_blank"
           rel="noopener noreferrer"
-          >https://fastai.dev/</a
+          class="inline-block bg-gray-700 text-white font-semibold px-10 py-4 rounded-lg shadow-lg hover:bg-indigo-700 transition"
         >
-      </p>
-      <a
-        href="https://fastai.dev/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-block bg-indigo-600 text-white font-semibold px-10 py-4 rounded-lg shadow-lg hover:bg-indigo-700 transition"
-      >
-        Visit FastAI
-      </a>
+          Visit FastAI
+        </a>
+
+      </div>
+      <div>
+        <ul class="space-y-4 text-blue-600">
+          <li class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            <a href="https://duonghuuphuc.com" target="_blank" class="hover:underline text-gray-400">https://duonghuuphuc.com</a>
+          </li>
+          <li class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18c-1.71 0-3.3-.6-4.52-1.6l6.92-6.92A6.43 6.43 0 0 1 18 12a6.4 6.4 0 0 1-6 8z"/></svg>
+            <a href="https://newai.vn" target="_blank" class="hover:underline text-gray-400">https://newai.vn</a>
+          </li>
+          <li class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18c-1.71 0-3.3-.6-4.52-1.6l6.92-6.92A6.43 6.43 0 0 1 18 12a6.4 6.4 0 0 1-6 8z"/></svg>
+            <a href="https://kamimind.ai" target="_blank" class="hover:underline text-gray-400">https://kamimind.ai</a>
+          </li>
+          <li class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4l-8 5-8-5V6l8 5 8-5z"/></svg>
+            <a href="mailto:dhp@fastai.dev" class="hover:underline text-gray-400">dhp@fastai.dev</a>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-100 py-8 text-center text-gray-600 text-sm">
-      &copy; 2024 FastAI. All rights reserved.
+    <footer class="bg-gray-100 py-8 text-center text-gray-600 text-sm dark:bg-transparent">
+      Copyright &copy; 2025 DHPIT. All rights reserved.
+      <div class="font-base italic text-gray-500 text-xs">This website is unrelated to fastai.com, fast.ai</div>
     </footer>
 
     <script src="assets/js/header.js"></script>
