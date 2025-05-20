@@ -17,7 +17,11 @@ tailwind.config = {
         white: "var(--color-white)",
         black: "var(--color-black)",
         dark: "var(--color-dark)",
-        primary: "var(--color-primary)",
+        primary: {
+          DEFAULT: "var(--color-primary)",
+          o90: "rgba(74,108,247,0.9)",
+          o80: "rgba(74,108,247,0.8)",
+        },
         yellow: "var(--color-yellow)",
         "bg-color-dark": "var(--color-bg-color-dark)",
         "body-color": "var(--color-body-color)",

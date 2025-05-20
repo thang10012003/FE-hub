@@ -1,30 +1,6 @@
-// sticky header
-const header = document.querySelector(".header");
-const stickyHeaderLogo = document.querySelector(".header-logo");
-const handleStickyHeader = () => {
-  const stickyHeaderClassList =
-    "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-xs transition shadow-md".split(
-      " "
-    );
-
-  if (window.scrollY >= 80) {
-    // for header
-    header.classList.remove("absolute", "bg-transparent");
-    header.classList.add(...stickyClassList);
-    // for header logo
-    stickyHeaderLogo.classList.add("py-5", "lg:py-3");
-    stickyHeaderLogo.classList.remove("py-8");
-  } else {
-    // for header
-    header.classList.remove(...stickyClassList);
-    header.classList.add("absolute", "bg-transparent");
-    // for header logo
-    stickyHeaderLogo.classList.add("py-8");
-    stickyHeaderLogo.classList.remove("py-5", "lg:py-3");
-  }
-};
-window.addEventListener("scroll", handleStickyHeader);
-
+// -------------------------------------------------
+// Handler
+// -------------------------------------------------
 const navbarToggleHandler = () => {
   const navbarToggler = document.getElementById("navbarToggler");
   const navbarCollapse = document.getElementById("navbarCollapse");
@@ -54,138 +30,182 @@ const navbarToggleHandler = () => {
     navbarCollapse.classList.remove("invisible", "top-[120%]", "opacity-0");
   }
 };
+const themeToggleHandler = (tar) => {
+  currentTheme = localStorage.getItem("theme") || "dark";
+  // tar is the target element
+  const ligtIcon = tar.firstElementChild;
+  const darkIcon = tar.lastElementChild;
+  // toggle theme
+  if (currentTheme === "dark") {
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+  } else {
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  }
+};
 
-// on loading
-document.addEventListener("DOMContentLoaded", () => {
-  const navMenuData = [
-    {
-      id: 1,
-      title: "Home",
-      path: "/",
-      newTab: false,
-    },
-    {
-      id: 2,
-      title: "About",
-      path: "/about",
-      newTab: false,
-    },
-    {
-      id: 33,
-      title: "Blog",
-      path: "/blog",
-      newTab: false,
-    },
-    {
-      id: 3,
-      title: "Support",
-      path: "/contact",
-      newTab: false,
-    },
-    {
-      id: 4,
-      title: "Pages",
-      newTab: false,
-      submenu: [
-        {
-          id: 41,
-          title: "About Page",
-          path: "/about",
-          newTab: false,
-        },
-        {
-          id: 42,
-          title: "Contact Page",
-          path: "/contact",
-          newTab: false,
-        },
-        {
-          id: 43,
-          title: "Blog Grid Page",
-          path: "/blog",
-          newTab: false,
-        },
-        {
-          id: 44,
-          title: "Blog Sidebar Page",
-          path: "/blog-sidebar",
-          newTab: false,
-        },
-        {
-          id: 45,
-          title: "Blog Details Page",
-          path: "/blog-details",
-          newTab: false,
-        },
-        {
-          id: 46,
-          title: "Sign In Page",
-          path: "/signin",
-          newTab: false,
-        },
-        {
-          id: 47,
-          title: "Sign Up Page",
-          path: "/signup",
-          newTab: false,
-        },
-        {
-          id: 48,
-          title: "Error Page",
-          path: "/error",
-          newTab: false,
-        },
-      ],
-    },
-  ];
-  const curPathName = window.location.pathname.split("/").pop();
-  const mapMenuDataToNavbar = (navbarCollapse, curPathName) => {
-    const navbarCollapseUl = document.createElement("ul");
-    navbarCollapseUl.classList.add("block", "lg:flex", "lg:space-x-12");
+// -------------------------------------------------
+// Sticky Header
+// -------------------------------------------------
+const header = document.querySelector(".header");
+const stickyHeaderLogo = document.querySelector(".header-logo");
+const handleStickyHeader = () => {
+  const stickyHeaderClassList =
+    "dark:shadow-sticky-dark fixed z-[9999] bg-[rgba(252,252,252,0.8)] dark:bg-[rgba(30,35,46,0.85)] shadow-sticky backdrop-blur-sm transition shadow-md".split(
+      " "
+    );
 
-    navMenuData.forEach((item) => {
-      const li = document.createElement("li");
-      const a = document.createElement("a");
-      li.classList.add("group", "relative");
-      li.key = item.id;
-      if (item.path) {
-        a.href = item.path;
-        a.textContent = item.title;
+  if (window.scrollY >= 80) {
+    // for header
+    header.classList.remove("absolute", "bg-transparent");
+    header.classList.add(...stickyHeaderClassList);
+    // for header logo
+    stickyHeaderLogo.classList.add("py-5", "lg:py-3");
+    stickyHeaderLogo.classList.remove("py-8");
+  } else {
+    // for header
+    header.classList.add("absolute", "bg-transparent");
+    header.classList.remove(...stickyHeaderClassList);
+    // for header logo
+    stickyHeaderLogo.classList.add("py-8");
+    stickyHeaderLogo.classList.remove("py-5", "lg:py-3");
+  }
+};
+window.addEventListener("scroll", handleStickyHeader);
+
+// -------------------------------------------------
+// Add navbar elements
+// -------------------------------------------------
+
+const navMenuData = [
+  {
+    id: 1,
+    title: "Home",
+    path: "/",
+    newTab: false,
+  },
+  {
+    id: 2,
+    title: "About",
+    path: "/about",
+    newTab: false,
+  },
+  {
+    id: 33,
+    title: "Blog",
+    path: "/blog",
+    newTab: false,
+  },
+  {
+    id: 3,
+    title: "Support",
+    path: "/contact",
+    newTab: false,
+  },
+  {
+    id: 4,
+    title: "Pages",
+    newTab: false,
+    submenu: [
+      {
+        id: 41,
+        title: "About Page",
+        path: "/about",
+        newTab: false,
+      },
+      {
+        id: 42,
+        title: "Contact Page",
+        path: "/contact",
+        newTab: false,
+      },
+      {
+        id: 43,
+        title: "Blog Grid Page",
+        path: "/blog",
+        newTab: false,
+      },
+      {
+        id: 44,
+        title: "Blog Sidebar Page",
+        path: "/blog-sidebar",
+        newTab: false,
+      },
+      {
+        id: 45,
+        title: "Blog Details Page",
+        path: "/blog-details",
+        newTab: false,
+      },
+      {
+        id: 46,
+        title: "Sign In Page",
+        path: "/signin",
+        newTab: false,
+      },
+      {
+        id: 47,
+        title: "Sign Up Page",
+        path: "/signup",
+        newTab: false,
+      },
+      {
+        id: 48,
+        title: "Error Page",
+        path: "/error",
+        newTab: false,
+      },
+    ],
+  },
+];
+
+const mapMenuDataToNavbar = (navbarCollapse, curPathName) => {
+  const navbarCollapseUl = document.createElement("ul");
+  navbarCollapseUl.classList.add("block", "lg:flex", "lg:space-x-12");
+
+  navMenuData.forEach((item) => {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    li.classList.add("group", "relative");
+    li.key = item.id;
+    if (item.path) {
+      a.href = item.path;
+      a.textContent = item.title;
+      a.classList.add(
+        "flex",
+        "py-2",
+        "text-base",
+        "lg:mr-0",
+        "lg:inline-flex",
+        "lg:px-0",
+        "lg:py-6"
+      );
+
+      if (
+        curPathName === item.path ||
+        (curPathName === "index.html" && item.path === "/")
+      ) {
+        a.classList.add("text-primary", "dark:text-white");
+      } else {
         a.classList.add(
-          "flex",
-          "py-2",
-          "text-base",
-          "lg:mr-0",
-          "lg:inline-flex",
-          "lg:px-0",
-          "lg:py-6"
+          "text-dark",
+          "hover:text-primary",
+          "dark:text-[rgba(255,255,255,0.7)]",
+          "dark:hover:text-white"
         );
-        console.log(curPathName);
-
-        if (
-          curPathName === item.path ||
-          (curPathName === "index.html" && item.path === "/")
-        ) {
-          a.classList.add("text-primary", "dark:text-white");
-        } else {
-          a.classList.add(
-            "text-dark",
-            "hover:text-primary",
-            "dark:text-[rgba(255,255,255,0.7)]",
-            "dark:hover:text-white"
-          );
-        }
       }
-      if (item.newTab) {
-        a.target = "_blank";
-        a.rel = "noopener noreferrer";
-      }
-      li.appendChild(a);
-      navbarCollapseUl.appendChild(li);
-    });
+    }
+    if (item.newTab) {
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+    }
+    li.appendChild(a);
+    navbarCollapseUl.appendChild(li);
+  });
 
-    navbarCollapse.appendChild(navbarCollapseUl);
-  };
-  const navbarCollapse = document.getElementById("navbarCollapse");
-  mapMenuDataToNavbar(navbarCollapse, curPathName);
-});
+  navbarCollapse.appendChild(navbarCollapseUl);
+};
+const navbarCollapse = document.getElementById("navbarCollapse");
+const curPathName = window.location.pathname.split("/").pop();
+mapMenuDataToNavbar(navbarCollapse, curPathName);
