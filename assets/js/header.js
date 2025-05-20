@@ -82,25 +82,25 @@ const navMenuData = [
   {
     id: 1,
     title: "Home",
-    path: "/",
+    path: "#home",
     newTab: false,
   },
   {
     id: 2,
-    title: "About",
-    path: "/about",
+    title: "Features",
+    path: "#features",
     newTab: false,
   },
   {
     id: 33,
-    title: "Blog",
-    path: "/blog",
+    title: "Reviews",
+    path: "#testimonials",
     newTab: false,
   },
   {
     id: 3,
     title: "Support",
-    path: "/contact",
+    path: "#contact",
     newTab: false,
   },
   {
