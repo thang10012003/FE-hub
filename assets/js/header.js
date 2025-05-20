@@ -2,15 +2,15 @@
 const header = document.querySelector(".header");
 const stickyHeaderLogo = document.querySelector(".header-logo");
 const handleStickyHeader = () => {
-  const stickyClassList =
-    "dark:bg-gray-dark dark:shadow-sticky-dark shadow-sticky fixed z-9999 bg-white/80 backdrop-blur-xs transition shadow-md".split(
+  const stickyHeaderClassList =
+    "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-xs transition shadow-md".split(
       " "
     );
 
   if (window.scrollY >= 80) {
     // for header
-    header.classList.add(...stickyClassList);
     header.classList.remove("absolute", "bg-transparent");
+    header.classList.add(...stickyClassList);
     // for header logo
     stickyHeaderLogo.classList.add("py-5", "lg:py-3");
     stickyHeaderLogo.classList.remove("py-8");
@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
           a.classList.add(
             "text-dark",
             "hover:text-primary",
-            "dark:text-white/70",
+            "dark:text-[rgba(255,255,255,0.7)]",
             "dark:hover:text-white"
           );
         }

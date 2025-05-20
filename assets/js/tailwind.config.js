@@ -1,0 +1,62 @@
+tailwind.config = {
+  darkMode: "class", // enable dark mode via class ".dark"
+  theme: {
+    // breakpoints, colors, shadows, fontFamily
+    extend: {
+      screens: {
+        xs: "450px",
+        sm: "575px",
+        md: "768px",
+        lg: "992px",
+        xl: "1200px",
+        "2xl": "1400px",
+      },
+      colors: {
+        current: "currentColor",
+        transparent: "transparent",
+        white: "var(--color-white)",
+        black: "var(--color-black)",
+        dark: "var(--color-dark)",
+        primary: "var(--color-primary)",
+        yellow: "var(--color-yellow)",
+        "bg-color-dark": "var(--color-bg-color-dark)",
+        "body-color": "var(--color-body-color)",
+        "body-color-dark": "var(--color-body-color-dark)",
+        stroke: "var(--color-stroke-stroke)",
+        "stroke-dark": "var(--color-stroke-dark)",
+        gray: {
+          50: "var(--color-gray-50)",
+          100: "var(--color-gray-100)",
+          200: "var(--color-gray-200)",
+          300: "var(--color-gray-300)",
+          400: "var(--color-gray-400)",
+          500: "var(--color-gray-500)",
+          600: "var(--color-gray-600)",
+          700: "var(--color-gray-700)",
+          800: "var(--color-gray-800)",
+          900: "var(--color-gray-900)",
+          950: "var(--color-gray-950)",
+          dark: "var(--color-gray-dark)",
+          light: "var(--color-gray-light)",
+        },
+      },
+      boxShadow: {
+        "sign-up": "var(--shadow-sign-up)",
+        one: "var(--shadow-one)",
+        two: "var(--shadow-two)",
+        three: "var(--shadow-three)",
+        sticky: "var(--shadow-sticky)",
+        "sticky-dark": "var(--shadow-sticky-dark)",
+        "feature-2": "var(--shadow-feature-2)",
+        submit: "var(--shadow-submit)",
+        "submit-dark": "var(--shadow-submit-dark)",
+        btn: "var(--shadow-btn)",
+        "btn-hover": "var(--shadow-btn-hover)",
+        "btn-light": "var(--shadow-btn-light)",
+      },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      },
+    },
+  },
+};

@@ -1,5 +1,8 @@
+/* ================================
+   Biến CSS toàn cục (custom properties)
+   ================================= */
 :root {
-  /* Breakpoints */
+  /* Breakpoints (dùng cho JS hoặc CSS thuần) */
   --breakpoint-xs: 450px;
   --breakpoint-sm: 575px;
   --breakpoint-md: 768px;
@@ -23,17 +26,6 @@
   --color-stroke-stroke: #e3e8ef;
   --color-stroke-dark: #353943;
 
-  --color-gray-50: #f9fafb;
-  --color-gray-100: #f3f4f6;
-  --color-gray-200: #e5e7eb;
-  --color-gray-300: #d1d5db;
-  --color-gray-400: #9ca3af;
-  --color-gray-500: #6b7280;
-  --color-gray-600: #4b5563;
-  --color-gray-700: #374151;
-  --color-gray-800: #1f2937;
-  --color-gray-900: #111827;
-  --color-gray-950: #030712;
   --color-gray-dark: #1e232e;
   --color-gray-light: #f0f2f9;
 
@@ -42,8 +34,8 @@
   --shadow-one: 0px 2px 3px rgba(7, 7, 77, 0.05);
   --shadow-two: 0px 5px 10px rgba(6, 8, 15, 0.1);
   --shadow-three: 0px 5px 15px rgba(6, 8, 15, 0.05);
-  --shadow-sticky: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
-  --shadow-sticky-dark: inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
+  --shadow-sticky: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  --shadow-sticky-dark: inset 0 -1px 0 rgba(255, 255, 255, 0.1);
   --shadow-feature-2: 0px 10px 40px rgba(48, 86, 211, 0.12);
   --shadow-submit: 0px 5px 20px rgba(4, 10, 34, 0.1);
   --shadow-submit-dark: 0px 5px 20px rgba(4, 10, 34, 0.1);
@@ -54,58 +46,34 @@
   --drop-shadow-three: 0px 5px 15px rgba(6, 8, 15, 0.05);
 }
 
+/* ===================
+     Base & global CSS
+     =================== */
+/* Sticky header padding */
 .header-logo.sticky {
   padding-top: 1.25rem;
   padding-bottom: 0.5rem;
 }
 
-/* Set default theme to dark */
+/* Default theme: dark */
 body {
   background-color: var(--color-bg-color-dark);
   color: var(--color-white);
+  font-family: "Inter", sans-serif;
 }
 
-/* Light mode styles */
+/* Light mode */
 body.light {
   background-color: var(--color-gray-dark);
   color: var(--color-body-color);
 }
 
-/* Toggle dark mode class */
-body.dark {
-  background-color: var(--color-bg-color-dark);
-  color: var(--color-white);
-  & #home {
-    background-color: var(--color-gray-dark);
-  }
+/* Dark mode (nếu cần override thêm) */
+body.dark #home {
+  background-color: var(--color-gray-dark);
 }
 
-input[type="checkbox"]:checked ~ label span svg {
-  display: inline-flex;
-}
-
-/* Utility classes for container and spacing */
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-/* Sticky and active menu item */
-.menu-scroll.active {
-  opacity: 0.7;
-}
-
-input#togglePlan:checked ~ .dot {
-  transform: translateX(100%);
-}
-
-input#checkboxLabel:checked ~ .box span {
-  opacity: 1;
-}
-
-/* Border color default */
+/* Border color default để tương thích Tailwind v3→v4 */
 *,
 ::after,
 ::before,
@@ -114,6 +82,7 @@ input#checkboxLabel:checked ~ .box span {
   border-color: var(--color-gray-200, currentColor);
 }
 
+/* Scrollbar tùy biến */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -121,104 +90,45 @@ input#checkboxLabel:checked ~ .box span {
   background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-  background: #4a6cf7;
+  background: var(--color-primary);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #4a6cf7aa;
+  background: rgba(74, 108, 247, 0.67);
 }
 
-.font-inter {
-  font-family: "Inter", sans-serif;
+/* ===========================
+     Các utility class tự viết
+     =========================== */
+.container {
+  margin-inline: auto;
+  padding-inline: 1rem;
 }
 
-/*  */
-.text-primary {
-  color: var(--color-primary);
-}
-.ring-primary {
-  --tw-ring-color: var(--color-primary);
+.menu-scroll.active {
+  opacity: 0.7;
 }
 
-.bg-gray-dark {
-  background-color: var(--color-gray-dark);
+/* Dots & boxes toggles */
+input#togglePlan:checked ~ .dot {
+  transform: translateX(100%);
 }
-.shadow-sticky-dark {
-  box-shadow: var(--shadow-sticky-dark);
+input#checkboxLabel:checked ~ .box span {
+  opacity: 1;
 }
-.shadow-sticky {
-  box-shadow: var(--shadow-sticky);
-}
-
-/* Utility classes for colors with hover and dark mode hover support */
-
-@custom-variant dark (&:is(.dark *));
-
-@layer utilities {
-  .text-primary {
-    color: var(--color-primary);
-  }
-  .hover\:text-primary:hover {
-    color: var(--color-primary);
-  }
-  .dark\:hover\:text-primary:hover {
-    color: var(--color-primary);
-  }
-
-  .bg-primary {
-    background-color: var(--color-primary);
-  }
-  .hover\:bg-primary:hover {
-    background-color: var(--color-primary);
-  }
-  .dark\:hover\:bg-primary:hover {
-    background-color: var(--color-primary);
-  }
-
-  .ring-primary {
-    --tw-ring-color: var(--color-primary);
-  }
-  .hover\:ring-primary:hover {
-    --tw-ring-color: var(--color-primary);
-  }
-  .dark\:hover\:ring-primary:hover {
-    --tw-ring-color: var(--color-primary);
-  }
-}
-@utility sticky {
-  & .header-logo {
-    @apply py-5 lg:py-2;
-  }
-
-  & .menu-scroll.active {
-    @apply opacity-70;
-  }
+input[type="checkbox"]:checked ~ label span svg {
+  display: inline-flex;
 }
 
-@utility header-logo {
-  .sticky & {
-    @apply py-5 lg:py-2;
-  }
-}
-@utility active {
-  .sticky &.menu-scroll {
-    @apply opacity-70;
-  }
-}
+/* Những class khác (không thể làm qua config) */
+/* .bg-gray-dark, .text-primary, .hover:text-primary, .dark:hover:text-white ... */
+// Đã khai báo trong config, Tailwind sẽ tự sinh.
 
-@utility dot {
-  input#togglePlan:checked ~ & {
-    @apply translate-x-full;
-  }
-}
-
-@utility box {
-  input#checkboxLabel:checked ~ & span {
-    @apply opacity-100;
-  }
-}
-@layer components {
-  input[type="checkbox"]:checked ~ label span svg {
-    @apply inline-flex;
-  }
+/* ===========================
+     Các utility class tailwind sinh không safe
+     =========================== */
+.hover\:shadow-btn-hover:hover,
+.hover\:shadow-one:hover {
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
