@@ -79,28 +79,28 @@ window.addEventListener("scroll", handleStickyHeader);
 // -------------------------------------------------
 
 const navMenuData = [
-  {
-    id: 1,
-    title: "Home",
-    path: "#home",
-    newTab: false,
-  },
+  // {
+  //   id: 1,
+  //   title: "Home",
+  //   path: "#home",
+  //   newTab: false,
+  // },
   {
     id: 2,
-    title: "Features",
-    path: "#features",
+    title: "Browse All",
+    path: "#server",
     newTab: false,
   },
   {
     id: 33,
-    title: "Reviews",
-    path: "#testimonials",
+    title: "Categories",
+    path: "#categories",
     newTab: false,
   },
   {
     id: 3,
-    title: "Support",
-    path: "#contact",
+    title: "Leaderboard",
+    path: "#leaderboard",
     newTab: false,
   },
   {
@@ -160,9 +160,13 @@ const navMenuData = [
   },
 ];
 
-const mapMenuDataToNavbar = (navbarCollapse, curPathName) => {
-  const navbarCollapseUl = document.createElement("ul");
-  navbarCollapseUl.classList.add("block", "lg:flex", "lg:space-x-12");
+const mapMenuDataToNavbar = (navbarCollapseUl, curPathName) => {
+  navbarCollapseUl.classList.add(
+    "block",
+    "lg:flex",
+    "lg:gap-6",
+    "lg:items-center"
+  );
 
   navMenuData.forEach((item) => {
     const li = document.createElement("li");
@@ -175,8 +179,7 @@ const mapMenuDataToNavbar = (navbarCollapse, curPathName) => {
       a.classList.add(
         "flex",
         "py-2",
-        "text-base",
-        "lg:mr-0",
+        // "lg:mr-0",
         "lg:inline-flex",
         "lg:px-0",
         "lg:py-6"
@@ -200,12 +203,14 @@ const mapMenuDataToNavbar = (navbarCollapse, curPathName) => {
       a.target = "_blank";
       a.rel = "noopener noreferrer";
     }
-    li.appendChild(a);
-    navbarCollapseUl.appendChild(li);
-  });
+    // if a is not empty, append it to li
 
-  navbarCollapse.appendChild(navbarCollapseUl);
+    if (a.innerHTML !== "") {
+      li.appendChild(a);
+      navbarCollapseUl.appendChild(li);
+    }
+  });
 };
-const navbarCollapse = document.getElementById("navbarCollapse");
+const navbarList = document.getElementById("navbarList");
 const curPathName = window.location.pathname.split("/").pop();
-mapMenuDataToNavbar(navbarCollapse, curPathName);
+mapMenuDataToNavbar(navbarList, curPathName);

@@ -3,29 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MCP</title>
+    <title>MCP4U</title>
     <meta
       name="description"
-      content="FastAI provides accessible, high-quality deep learning education and tools to empower everyone to access AI applications."
+      content="MCP4U is a platform that provides comprehensive resources and tools for deep learning and machine learning enthusiasts, researchers, and developers."
     />
     <meta
       name="keywords"
-      content="FastAI, deep learning, machine learning, AI, artificial intelligence, AI development, education, tools, neural networks, fastai library, AI solutions"
+      content="MCP4U, deep learning, machine learning, AI, resources, tools"
     />
     <meta name="author" content="FastAI Team" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://fastai.dev/" />
+    <link rel="canonical" href="https://mcp4u.net/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://fastai.dev/" />
+    <meta property="og:url" content="https://mcp4u.net/" />
     <meta
       property="og:title"
-      content="FastAI - Cutting-Edge Deep Learning for Everyone"
+      content="MCP4U - Cutting-Edge Deep Learning for Everyone"
     />
     <meta
       property="og:description"
-      content="FastAI provides accessible, high-quality deep learning education and tools to empower everyone to build AI applications."
+      content="MCP4U is a platform that provides comprehensive resources and tools for deep learning and machine learning enthusiasts, researchers, and developers."
     />
     <meta
       property="og:image"
@@ -34,14 +34,11 @@
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://fastai.dev/" />
-    <meta
-      property="twitter:title"
-      content="FastAI - Cutting-Edge Deep Learning for Everyone"
-    />
+    <meta property="twitter:url" content="https://mcp4u.net/" />
+    <meta property="twitter:title" content="MCP4U - MCP Hub for Everyone" />
     <meta
       property="twitter:description"
-      content="FastAI provides accessible, high-quality deep learning education and tools to empower everyone to build AI applications."
+      content="MCP4U is a platform that provides comprehensive resources and tools for deep learning and machine learning enthusiasts, researchers, and developers."
     />
     <meta
       property="twitter:image"
@@ -52,10 +49,10 @@
       {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "FastAI",
-        "url": "https://fastai.dev/",
+        "name": "MCP4U",
+        "url": "https://mcp4u.net/",
         "logo": "https://static2.newaihub.com/cdn/fastai-dev/img/logo/fastai-logo-512px.webp",
-        "sameAs": ["https://twitter.com/fast_ai", "https://github.com/fastai"]
+        "sameAs": ["https://twitter.com/mcp4u", "https://github.com/mcp4u"]
       }
     </script>
 
@@ -73,7 +70,7 @@
     <!-- link to assets/styles.css from local -->
     <link rel="stylesheet" href="mcp_assets/styles.css" />
   </head>
-  <body class="bg-[#FCFCFC] dark:bg-black leading-relaxed">
+  <body class="leading-relaxed">
     <!-- Header -->
     <header
       class="header left-0 top-0 z-40 flex w-full items-center absolute bg-transparent"
@@ -83,18 +80,33 @@
           <div class="w-60 max-w-full px-4 xl:mr-12">
             <a href="#home" class="header-logo block w-full py-8">
               <div class="flex items-center gap-2">
-                <img
-                  src="https://static2.newaihub.com/cdn/fastai-dev/img/logo/fastai-logo-512px.webp"
-                  alt="logo"
-                  decoding="async"
-                  data-nimg="1"
-                  class="h-[38px] text-transparent"
-                />
-                <!-- <span class="text-3xl font-bold dark:text-white"> FastAI.dev </span> -->
-                <span
-                  class="text-3xl font-bold text-primary dark:bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] bg-clip-text dark:text-transparent"
-                >
-                  FastAI.dev
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="h-5 w-5"
+                  >
+                    <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                    <rect x="9" y="9" width="6" height="6"></rect>
+                    <path d="M15 2v2"></path>
+                    <path d="M15 20v2"></path>
+                    <path d="M2 15h2"></path>
+                    <path d="M2 9h2"></path>
+                    <path d="M20 15h2"></path>
+                    <path d="M20 9h2"></path>
+                    <path d="M9 2v2"></path>
+                    <path d="M9 20v2"></path>
+                  </svg>
+                </span>
+                <span class="hidden sm:inline-block">
+                  <strong class="font-extrabold">MCP4U</strong> Market
                 </span>
               </div>
             </a>
@@ -119,20 +131,57 @@
               </button>
               <nav
                 id="navbarCollapse"
-                class="navbar border-body-color/50 dark:border-body-color/20 dark:bg-dark absolute right-0 z-30 w-[250px] rounded border-[.5px] bg-white px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 invisible top-[120%] opacity-0"
-              ></nav>
+                class="navbar lg:flex absolute text-sm font-medium right-0 z-30 w-[250px] rounded border-foreground-o60 border-[.5px] bg-background px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 invisible top-[120%] opacity-0 shadow-lg lg:shadow-none"
+              >
+                <ul id="navbarList"></ul>
+                <div class="flex items-center">
+                  <div
+                    class="hidden lg:inline-block lg:mx-6 h-4 w-px bg-foreground opacity-20"
+                    aria-hidden="true"
+                  ></div>
+                  <a
+                    class="transition-colors py-2 hover:text-foreground-o80 text-foreground-o60"
+                    href="#what-is-an-mcp-server"
+                    >What is an MCP Server?</a
+                  >
+                </div>
+                <a
+                  class="block bg-accent-o80 lg:hidden font-bold text-foreground-o60 py-2 hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 text-center"
+                  href="/submit"
+                >
+                  Submit
+                </a>
+              </nav>
             </div>
 
-            <div class="flex items-center justify-end pr-16 lg:pr-0">
+            <div class="flex items-center justify-end pr-16 lg:pr-0 lg:gap-4">
               <a
-                href="/signin"
-                class="text-dark hidden px-7 py-3 text-base font-medium hover:opacity-70 md:block dark:text-white"
-                >Sign In</a
+                href="/submit"
+                class="items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 hidden md:inline-flex"
+                >Submit</a
               >
               <a
-                href="/signup"
-                class="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-primary-o90 md:block md:px-9 lg:px-6 xl:px-9"
-                >Sign Up</a
+                class="justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-9 rounded-md px-3 bg-primary hover:bg-primary-o90 flex items-center gap-1.5"
+                href="/waitlist"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-4 w-4"
+                >
+                  <path d="M12 22v-5"></path>
+                  <path d="M9 8V2"></path>
+                  <path d="M15 8V2"></path>
+                  <path
+                    d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"
+                  ></path></svg
+                >Connect to Claude</a
               >
               <div>
                 <button
@@ -182,7 +231,7 @@
     <!-- Hero Section -->
     <section
       id="home"
-      class="relative flex items-center z-10 overflow-hidden bg-white pb-16 pt-[86px] dark:bg-gray-dark min-h-svh"
+      class="relative flex items-center z-10 overflow-hidden pt-[86px] min-h-svh py-12 md:py-14 pb-8 md:pb-10 bg-gradient-to-b from-primary/5 to-background"
     >
       <div class="container">
         <div class="-mx-4 flex flex-wrap">
@@ -196,11 +245,10 @@
                   <h1
                     class="relative flex gap-[1rem] z-10 py-2 text-4xl font-extrabold md:py-8 leading-tight text-black dark:text-white sm:text-5xl md:text-6xl xl:text-8xl"
                   >
-                    <span class="opacity-80 select-none">to</span>
-                    <span
-                      class="text-primary dark:bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] bg-clip-text dark:text-transparent"
-                      >FastAI.dev</span
+                    <span class="text-primary-o90 opacity-80 select-none"
+                      >to</span
                     >
+                    <span class="text-primary">MCP4U</span>
                   </h1>
                   <p
                     class="text-black dark:text-white absolute-center font-extrabold z-0 text-5xl sm:text-6xl opacity-10 md:text-8xl xl:text-9xl uppercase"
@@ -209,33 +257,44 @@
                   </p>
                 </div>
               </div>
-              <h2
-                class="mb-5 text-4xl font-extrabold leading-tight text-black dark:text-white sm:text-5xl md:text-6xl sm:leading-tight md:leading-tight"
-              >
-                Cutting-Edge AI for Everyone
-              </h2>
-              <p
-                class="mb-12 text-lg leading-relaxed! text-body-color dark:text-body-color-dark sm:text-xl md:text-2xl"
-              >
-                Accessible, high-quality education and tools to empower AI
-                developers and researchers. Providing an AI hub of innovation,
-                theories, practices, and solutions.
-              </p>
-              <div
-                class="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
-              >
-                <a
-                  href="#"
-                  class="rounded-xs shadow-lg bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary-o80 transition"
+              <div class="flex flex-col items-center space-y-4 text-center">
+                <h2
+                  class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl sm:leading-tight md:leading-tight"
                 >
-                  🔥 Getting Started
-                </a>
-                <a
-                  href="#"
-                  class="hidden rounded-xs bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
-                >
-                  .
-                </a>
+                  Find The Best MCP Servers For You
+                </h2>
+                <p class="max-w-[700px] text-muted-foreground md:text-xl">
+                  Explore our curated collection of MCP servers to connect AI to
+                  your favorite tools.
+                </p>
+                <form class="w-full max-w-2xl mt-2">
+                  <div class="relative">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground"
+                    >
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <path d="m21 21-4.3-4.3"></path></svg
+                    ><input
+                      type="text"
+                      class="flex h-12 mb-3 w-full rounded-md border border-input bg-background px-9 text-md ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 pl-9 pr-9 [&amp;::-webkit-search-cancel-button]:hidden [&amp;::-webkit-search-decoration]:hidden [&amp;::-ms-clear]:hidden"
+                      placeholder="Search for MCP servers..."
+                      autocomplete="off"
+                      name="search"
+                      value=""
+                    /><button type="submit" class="sr-only" aria-label="Search">
+                      Search
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
             <!-- SVG background decor -->
@@ -382,8 +441,7 @@
       id="testimonials"
       class="bg-indigo-50 py-20 dark:bg-transparent"
       style="
-        background-image: url('https://your-existing-bg.jpg'),
-          url('https://startup.nextjstemplates.com/images/video/shape.svg');
+        background-image: url('https://startup.nextjstemplates.com/images/video/shape.svg');
         background-position: center, top right;
         background-repeat: no-repeat, no-repeat;
       "
@@ -437,15 +495,15 @@
           >
           or visit our website:
           <a
-            href="https://fastai.dev/"
+            href="https://mcp4u.net/"
             class="text-indigo-600 hover:underline"
             target="_blank"
             rel="noopener noreferrer"
-            >https://fastai.dev/</a
+            >https://mcp4u.net/</a
           >
         </p>
         <a
-          href="https://fastai.dev/"
+          href="https://mcp4u.net/"
           target="_blank"
           rel="noopener noreferrer"
           class="inline-block bg-gray-700 text-white font-semibold px-10 py-4 rounded-lg shadow-lg hover:bg-indigo-700 transition"
@@ -536,6 +594,6 @@
       </div>
     </footer>
 
-    <script src="assets/js/header.js"></script>
+    <script src="mcp_assets/js/header.js"></script>
   </body>
 </html>
