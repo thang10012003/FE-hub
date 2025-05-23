@@ -229,9 +229,10 @@
     </header>
 
     <!-- Hero Section -->
+    <!-- class="relative flex items-center z-10 overflow-hidden pt-[86px] min-h-svh py-12 md:py-14 pb-8 md:pb-10 bg-gradient-to-b from-primary/5 to-background " -->
     <section
       id="home"
-      class="relative flex items-center z-10 overflow-hidden pt-[86px] min-h-svh py-12 md:py-14 pb-8 md:pb-10 bg-gradient-to-b from-primary/5 to-background"
+      class="relative flex items-center z-10 overflow-hidden pt-[86px] min-h-svh py-12 md:py-14 pb-8 md:pb-10 bg-gradient-to-br dark:from-gray-900 dark:to-gray-500"
     >
       <div class="container">
         <div class="-mx-4 flex flex-wrap">
@@ -357,84 +358,31 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="container mx-auto px-6 py-20">
+    <section id="features" class="container mx-auto px-24 py-20">
       <h2
-        class="text-4xl font-extrabold text-center mb-16 text-gray-900 dark:text-white"
+        class="text-3xl font-extrabold text-left mb-12 text-gray-900 dark:text-white"
       >
         Main Features
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-        <div
-          class="flex flex-col items-center text-center p-8 bg-gray-200 dark:bg-transparent border border-gray-200 rounded-xl shadow hover:shadow-lg transition cursor-pointer transform active:scale-105 hover:scale-105 duration-200 ease-in-out shadow-md hover:shadow-lg p-4 rounded-xl hover:bg-gray-300"
-        >
-          <svg
-            class="w-16 h-16 mb-6 text-indigo-600"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M12 20l9-5-9-5-9 5 9 5z" />
-            <path d="M12 12l9-5-9-5-9 5 9 5z" />
-          </svg>
-          <h3 class="text-2xl font-semibold mb-3 dark:text-white">
-            State-of-the-Art Models
-          </h3>
-          <p class="text-gray-700 font-semibold">
-            Leverage the latest deep learning architectures and techniques.
-          </p>
-        </div>
-        <div
-          class="flex flex-col items-center text-center p-8 bg-gray-200 dark:bg-transparent border border-gray-200 rounded-xl shadow hover:shadow-lg transition cursor-pointer transform active:scale-105 hover:scale-105 duration-200 ease-in-out shadow-md hover:shadow-lg p-4 rounded-xl hover:bg-gray-300"
-        >
-          <svg
-            class="w-16 h-16 mb-6 text-indigo-600"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <circle cx="12" cy="12" r="10" />
-            <line x1="12" y1="8" x2="12" y2="12" />
-            <line x1="12" y1="16" x2="12" y2="16" />
-          </svg>
-          <h3 class="text-2xl font-semibold mb-3 dark:text-white">
-            Open Source & Community
-          </h3>
-          <p class="text-gray-700 font-semibold">
-            Join a vibrant community contributing to open source AI tools and
-            courses.
-          </p>
-        </div>
-        <div
-          class="flex flex-col items-center text-center p-8 bg-gray-200 dark:bg-transparent border border-gray-200 rounded-xl shadow hover:shadow-lg transition cursor-pointer transform active:scale-105 hover:scale-105 duration-200 ease-in-out shadow-md hover:shadow-lg p-4 rounded-xl hover:bg-gray-300"
-        >
-          <svg
-            class="w-16 h-16 mb-6 text-indigo-600"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M3 12h18" />
-            <path d="M12 3v18" />
-          </svg>
-          <h3 class="text-2xl font-semibold mb-3 dark:text-white">
-            Easy to Use
-          </h3>
-          <p class="text-gray-700 font-semibold">
-            Designed for both beginners and experts to quickly build AI
-            applications.
-          </p>
-        </div>
+        <mcp-server></mcp-server>
+        <mcp-server></mcp-server>
+        <mcp-server></mcp-server>
+        <mcp-server></mcp-server>
+      </div>
+      <h2
+        class="text-3xl mt-10 font-extrabold text-left mb-12 text-gray-900 dark:text-white"
+      >
+        Main Features
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <mcp-server></mcp-server>
+        <mcp-server></mcp-server>
+        <mcp-server></mcp-server>
+        <mcp-server></mcp-server>
       </div>
     </section>
+
 
     <!-- Testimonials Section -->
     <section
@@ -595,5 +543,6 @@
     </footer>
 
     <script src="mcp_assets/js/header.js"></script>
+    <script type="module" src="mcp_assets/js/mcpServer.js"></script>
   </body>
-</html>
+</html>   
