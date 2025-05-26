@@ -153,6 +153,14 @@ input[type="checkbox"]:checked ~ label span svg {
     scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.text-stroke {
+  -webkit-text-stroke: 5px var(--color-primary);
+  color: transparent;
+  /* shadow */
+  text-shadow: 0px 0px 5px var(--color-gray-600),
+    0px 0px 10px var(--color-gray-600), 0px 0px 15px var(--color-gray-600);
+}
+
 /* Những class khác (không thể làm qua config) */
 /* .bg-gray-dark, .text-primary, .hover:text-primary, .dark:hover:text-white ... */
 // Đã khai báo trong config, Tailwind sẽ tự sinh.

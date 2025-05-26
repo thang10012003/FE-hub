@@ -203,7 +203,7 @@
                     >
                   </h1>
                   <p
-                    class="text-black dark:text-white absolute-center font-extrabold z-0 text-5xl sm:text-6xl opacity-10 md:text-8xl xl:text-9xl uppercase"
+                    class="text-transparent text-stroke absolute-center font-extrabold z-0 text-5xl sm:text-6xl opacity-20 md:text-8xl xl:text-9xl uppercase"
                   >
                     welcome
                   </p>
@@ -217,9 +217,11 @@
               <p
                 class="mb-12 text-lg leading-relaxed! text-body-color dark:text-body-color-dark sm:text-xl md:text-2xl"
               >
-                Accessible, high-quality education and tools to empower AI
-                developers and researchers. Providing an AI hub of innovation,
-                theories, practices, and solutions.
+                <span class="">FastAI</span> is your all-in-one AI-powered
+                platform designed to revolutionize the way you interact, create,
+                and communicate. Whether you're a startup, a content creator, or
+                a developer, FastAI offers a suite of tools to enhance
+                productivity and engagement.
               </p>
               <div
                 class="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
@@ -296,102 +298,22 @@
         </div>
       </div>
     </section>
-
-    <!-- Features Section -->
-    <section id="features" class="container mx-auto px-6 py-20">
-      <h2
-        class="text-4xl font-extrabold text-center mb-16 text-gray-900 dark:text-white"
-      >
-        Main Features
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-        <div
-          class="flex flex-col items-center text-center p-8 bg-gray-200 dark:bg-transparent border border-gray-200 rounded-xl shadow hover:shadow-lg transition cursor-pointer transform active:scale-105 hover:scale-105 duration-200 ease-in-out shadow-md hover:shadow-lg p-4 rounded-xl hover:bg-gray-300"
-        >
-          <svg
-            class="w-16 h-16 mb-6 text-indigo-600"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M12 20l9-5-9-5-9 5 9 5z" />
-            <path d="M12 12l9-5-9-5-9 5 9 5z" />
-          </svg>
-          <h3 class="text-2xl font-semibold mb-3 dark:text-white">
-            State-of-the-Art Models
-          </h3>
-          <p class="text-gray-700 font-semibold">
-            Leverage the latest deep learning architectures and techniques.
-          </p>
-        </div>
-        <div
-          class="flex flex-col items-center text-center p-8 bg-gray-200 dark:bg-transparent border border-gray-200 rounded-xl shadow hover:shadow-lg transition cursor-pointer transform active:scale-105 hover:scale-105 duration-200 ease-in-out shadow-md hover:shadow-lg p-4 rounded-xl hover:bg-gray-300"
-        >
-          <svg
-            class="w-16 h-16 mb-6 text-indigo-600"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <circle cx="12" cy="12" r="10" />
-            <line x1="12" y1="8" x2="12" y2="12" />
-            <line x1="12" y1="16" x2="12" y2="16" />
-          </svg>
-          <h3 class="text-2xl font-semibold mb-3 dark:text-white">
-            Open Source & Community
-          </h3>
-          <p class="text-gray-700 font-semibold">
-            Join a vibrant community contributing to open source AI tools and
-            courses.
-          </p>
-        </div>
-        <div
-          class="flex flex-col items-center text-center p-8 bg-gray-200 dark:bg-transparent border border-gray-200 rounded-xl shadow hover:shadow-lg transition cursor-pointer transform active:scale-105 hover:scale-105 duration-200 ease-in-out shadow-md hover:shadow-lg p-4 rounded-xl hover:bg-gray-300"
-        >
-          <svg
-            class="w-16 h-16 mb-6 text-indigo-600"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M3 12h18" />
-            <path d="M12 3v18" />
-          </svg>
-          <h3 class="text-2xl font-semibold mb-3 dark:text-white">
-            Easy to Use
-          </h3>
-          <p class="text-gray-700 font-semibold">
-            Designed for both beginners and experts to quickly build AI
-            applications.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials Section -->
+    <!-- About and Features Section -->
     <section
-      id="testimonials"
-      class="bg-indigo-50 py-20 dark:bg-transparent"
-      style="
-        background-image: url('https://startup.nextjstemplates.com/images/video/shape.svg');
-        background-position: center, top right;
-        background-repeat: no-repeat, no-repeat;
-      "
+      class="bg-indigo-50 pt-20 min-h-svh dark:bg-gray-900 bg-[url('https://startup.nextjstemplates.com/images/video/shape.svg')] bg-cover bg-center bg-no-repeat"
     >
-      <div class="container mx-auto px-6 max-w-4xl text-center min-h-[60vh]">
-        <h2 class="text-4xl font-extrabold mb-12 text-gray-900 dark:text-white">
-          <!-- title -->
+      <!-- About Section -->
+      <div
+        id="about"
+        class="container mx-auto px-6 max-w-5xl text-center min-h-[50vh] flex flex-col items-center justify-center"
+      >
+        <h2
+          class="text-4xl sm:text-5xl md:text-6xl font-extrabold my-12 text-gray-900 dark:text-white"
+        >
+          About FastAI
         </h2>
-        <div class="space-y-12">
+        <div>
+          <!-- hidden part -->
           <blockquote
             class="bg-white p-8 rounded-xl shadow-lg dark:bg-gray-600 hover:scale-105 transition transform duration-200 ease-in-out select-none hidden"
           >
@@ -403,17 +325,205 @@
               - Jane Doe, AI Researcher
             </footer>
           </blockquote>
-          <blockquote
-            class="bg-white p-8 rounded-xl shadow-lg dark:bg-gray-600 hover:scale-105 transition transform duration-200 ease-in-out select-none hidden"
+          <!-- end hidden -->
+          <p
+            class="text-lg sm:text-xl md:text-2xl p-8 text-gray-600 dark:text-white dark:opacity-85 select-all text-center"
           >
-            <p class="text-lg italic text-gray-700 dark:text-[#fffc] mb-4">
-              "The tools provided by FastAI make building AI applications
-              accessible and enjoyable for beginners and experts alike."
-            </p>
-            <footer class="text-gray-900 dark:text-white font-semibold">
-              - John Smith, Developer
-            </footer>
-          </blockquote>
+            FastAI is a cutting-edge AI-powered platform designed to
+            revolutionize digital interactions. By integrating advanced natural
+            language processing and machine learning technologies, FastAI offers
+            a suite of tools that empower users to create, communicate, and
+            collaborate more effectively. Whether you're a startup aiming to
+            enhance customer engagement, an educator seeking interactive
+            learning tools, or a developer looking for AI-driven solutions,
+            FastAI provides the versatility and power to meet your needs.
+          </p>
+        </div>
+      </div>
+      <!-- Features Section -->
+      <div
+        id="features"
+        class="bg-gradient-to-b from-40% from-transparent to-[#FCFCFC] dark:to-gray-dark min-h-[50vh] pb-20"
+      >
+        <div class="container mx-auto px-6 py-20 flex flex-col items-center">
+          <h2
+            class="flex flex-col items-center gap-6 text-4xl font-extrabold text-center mb-16 text-gray-900 dark:text-white"
+          >
+            <span style="font-size: 1.25em">✨</span>
+            Key Features
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- item -->
+            <div
+              class="flex flex-col items-center text-center p-8 bg-gray-300-o30 border border-gray-300 dark:border-gray-500 transition cursor-pointer transform active:scale-105 hover:scale-105 duration-200 ease-in-out shadow-md hover:shadow-lg rounded-md hover:bg-gray-100p-o30 dark:hover:bg-gray-700-o30 dark:bg-gray-900-o30"
+            >
+              <div
+                class="mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-md bg-primary-o10 text-primary"
+              >
+                <img
+                  src="/assets/svg/home_feature_robot.svg"
+                  alt=""
+                  height="40px"
+                  width="40px"
+                />
+              </div>
+              <h3
+                class="mb-5 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl"
+              >
+                AI Chatbox Assistants
+              </h3>
+              <p class="font-semibold text-gray-700 dark:text-gray-400">
+                Engage with 16 preloaded AI chat assistants, each tailored for
+                specific tasks—from customer support to creative writing. These
+                assistants provide prompt, accurate, and human-like responses,
+                ensuring a seamless conversational experience.
+              </p>
+            </div>
+            <!-- item -->
+            <div
+              class="flex flex-col items-center text-center p-8 bg-gray-300-o30 border border-gray-300 dark:border-gray-500 transition cursor-pointer transform active:scale-105 hover:scale-105 duration-200 ease-in-out shadow-md hover:shadow-lg rounded-md hover:bg-gray-100p-o30 dark:hover:bg-gray-700-o30 dark:bg-gray-900-o30"
+            >
+              <div
+                class="mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-md bg-primary-o10 text-primary"
+              >
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  class="fill-current"
+                >
+                  <path
+                    opacity="0.5"
+                    d="M20.5914 34.2584C20.2394 34.5172 19.7603 34.5175 19.408 34.2593L4.19163 23.1079C3.8395 22.8498 3.36065 22.85 3.00873 23.1084L1.09802 24.5111C0.553731 24.9107 0.553731 25.7237 1.09802 26.1233L19.4082 39.5655C19.7604 39.824 20.2396 39.824 20.5918 39.5655L38.9029 26.1226C39.4469 25.7232 39.4473 24.9107 38.9036 24.5109L36.9701 23.0889C36.6177 22.8298 36.1378 22.8297 35.7854 23.0888L20.5914 34.2584Z"
+                  ></path>
+                  <path
+                    d="M19.408 28.931C19.7603 29.1896 20.2396 29.1894 20.5918 28.9306L36.3556 17.3466L38.8979 15.4883C39.4437 15.0894 39.4446 14.275 38.8996 13.8749L20.5918 0.43445C20.2396 0.175911 19.7604 0.175913 19.4082 0.434452L1.09706 13.8774C0.553051 14.2767 0.552712 15.0892 1.09638 15.4891L3.62222 17.3466L19.408 28.931Z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="mb-5 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl"
+              >
+                AI-Powered Content Generation
+              </h3>
+              <p class="font-semibold text-gray-700 dark:text-gray-400">
+                Generate high-quality, SEO-optimized content effortlessly.
+                Whether it's articles, blogs, ads, or social media posts,
+                FastAI's advanced algorithms craft compelling narratives
+                tailored to your needs.
+              </p>
+            </div>
+            <!-- item -->
+            <div
+              class="flex flex-col items-center text-center p-8 bg-gray-300-o30 border border-gray-300 dark:border-gray-500 transition cursor-pointer transform active:scale-105 hover:scale-105 duration-200 ease-in-out shadow-md hover:shadow-lg rounded-md hover:bg-gray-100p-o30 dark:hover:bg-gray-700-o30 dark:bg-gray-900-o30"
+            >
+              <div
+                class="mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-md bg-primary-o10 text-primary"
+              >
+                <img
+                  src="/assets/svg/home_feature_painting.svg"
+                  alt=""
+                  height="40px"
+                  width="40px"
+                />
+              </div>
+              <h3
+                class="mb-5 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl"
+              >
+                AI Image Creation
+              </h3>
+              <p class="font-semibold text-gray-700 dark:text-gray-400">
+                Transform your ideas into stunning visuals using FastAI's
+                integration with advanced image generation models. Describe your
+                vision, and watch as it materializes into high-quality images
+                suitable for various applications.
+              </p>
+            </div>
+            <!-- item -->
+            <div
+              class="flex flex-col items-center text-center p-8 bg-gray-300-o30 border border-gray-300 dark:border-gray-500 transition cursor-pointer transform active:scale-105 hover:scale-105 duration-200 ease-in-out shadow-md hover:shadow-lg rounded-md hover:bg-gray-100p-o30 dark:hover:bg-gray-700-o30 dark:bg-gray-900-o30"
+            >
+              <div
+                class="mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-md bg-primary-o10 text-primary"
+              >
+                <img
+                  src="/assets/svg/home_feature_programming.svg"
+                  alt=""
+                  height="40px"
+                  width="40px"
+                />
+              </div>
+              <h3
+                class="mb-5 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl"
+              >
+                Code Generation
+              </h3>
+              <p class="font-semibold text-gray-700 dark:text-gray-400">
+                Accelerate your development process with AI-generated code
+                snippets across multiple programming languages. Ideal for
+                prototyping, learning, or speeding up your coding tasks.
+              </p>
+            </div>
+            <!-- item -->
+            <div
+              class="flex flex-col items-center text-center p-8 bg-gray-300-o30 border border-gray-300 dark:border-gray-500 transition cursor-pointer transform active:scale-105 hover:scale-105 duration-200 ease-in-out shadow-md hover:shadow-lg rounded-md hover:bg-gray-100p-o30 dark:hover:bg-gray-700-o30 dark:bg-gray-900-o30"
+            >
+              <div
+                class="mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-md bg-primary-o10 text-primary"
+              >
+                <img
+                  src="/assets/svg/home_feature_voice.svg"
+                  alt=""
+                  height="60px"
+                  width="60px"
+                />
+              </div>
+              <h3
+                class="mb-5 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl"
+              >
+                Voice Assistants
+              </h3>
+              <p class="font-semibold text-gray-700 dark:text-gray-400">
+                Integrate voice capabilities into your applications with
+                FastAI's voice assistants. Enhance user interaction through
+                natural language understanding and speech synthesis.
+              </p>
+            </div>
+            <!-- item -->
+            <div
+              class="flex flex-col items-center text-center p-8 bg-gray-300-o30 border border-gray-300 dark:border-gray-500 transition cursor-pointer transform active:scale-105 hover:scale-105 duration-200 ease-in-out shadow-md hover:shadow-lg rounded-md hover:bg-gray-100p-o30 dark:hover:bg-gray-700-o30 dark:bg-gray-900-o30"
+            >
+              <div
+                class="mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-md bg-primary-o10 text-primary"
+              >
+                <svg
+                  width="40"
+                  height="45"
+                  viewBox="0 0 40 45"
+                  class="fill-current"
+                >
+                  <path
+                    opacity="0.5"
+                    d="M31.579 37.8948C28.6737 37.8948 26.3158 35.5369 26.3158 32.6317C26.3158 31.9159 26.4527 31.2306 26.7135 30.6015C26.7959 30.4027 26.7605 30.1711 26.6083 30.019L24.9997 28.4103C24.7766 28.1872 24.4043 28.2238 24.2487 28.4983C23.5588 29.7145 23.1579 31.125 23.1579 32.6317C23.1579 37.2843 26.9263 41.0527 31.579 41.0527V43.0035C31.579 43.449 32.1175 43.6721 32.4325 43.3571L35.9622 39.8273C36.1575 39.6321 36.1575 39.3155 35.9622 39.1202L32.4325 35.5905C32.1175 35.2755 31.579 35.4986 31.579 35.9441V37.8948ZM31.579 24.2106V22.2598C31.579 21.8144 31.0404 21.5913 30.7254 21.9063L27.1957 25.436C27.0004 25.6313 27.0004 25.9479 27.1957 26.1431L30.7254 29.6729C31.0404 29.9879 31.579 29.7648 31.579 29.3193V27.3685C34.4842 27.3685 36.8421 29.7264 36.8421 32.6317C36.8421 33.3474 36.7052 34.0328 36.4444 34.6618C36.362 34.8606 36.3974 35.0922 36.5496 35.2444L38.1582 36.853C38.3813 37.0762 38.7536 37.0396 38.9092 36.7651C39.5991 35.5488 40 34.1384 40 32.6317C40 27.9791 36.2316 24.2106 31.579 24.2106Z"
+                  ></path>
+                  <path
+                    d="M18.9474 32.6316C18.9474 35.4705 19.8099 38.0969 21.2941 40.2796C21.7904 41.0094 21.3054 42.1053 20.4229 42.1053H4.21053C1.87368 42.1053 0 40.2316 0 37.8947V4.21053C0 1.89474 1.87368 0 4.21053 0H6.31579H16.8421H29.4737C31.7895 0 33.6842 1.87368 33.6842 4.21053V17.9544C33.6842 18.5032 33.1804 18.9474 32.6316 18.9474C25.0737 18.9474 18.9474 25.0737 18.9474 32.6316Z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="mb-5 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl"
+              >
+                API Integration
+              </h3>
+              <p class="font-semibold text-gray-700 dark:text-gray-400">
+                Seamlessly integrate FastAI's capabilities into your existing
+                applications with our robust API. Access AI chat, content
+                generation, image creation, and more, all through a simple API
+                interface.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
